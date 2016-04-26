@@ -54,8 +54,7 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
 
-        //MAAATHIIAAAS
-
+        //MAAATHIIAAAS//tetetyugesyufgasdgcuyisdguf
         // Try to load last opened person file.
         // File file = getPersonFilePath();
         //if (file != null) {
