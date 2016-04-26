@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5a77116-e806-48a8-90a4-ce7a8a2b4ef5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/MainApp.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/MainApp.java" />
-    </list>
+    <list default="true" id="b5a77116-e806-48a8-90a4-ce7a8a2b4ef5" name="Default" comment="" />
     <ignored path="DepartureAppFX.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -723,12 +721,12 @@
       <created>1461675768291</created>
       <option name="number" value="Default" />
       <updated>1461675768291</updated>
-      <workItem from="1461675769609" duration="104000" />
+      <workItem from="1461675769609" duration="690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104000" />
+    <option name="totallyTimeSpent" value="690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="655" y="194" width="1936" height="1056" extended-state="0" />
