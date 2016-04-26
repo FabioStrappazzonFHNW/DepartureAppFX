@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="DepartureAppFX">
+    <output-path>$PROJECT_DIR$/out/artifacts/DepartureAppFX</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="ch.fhnw.oop2.departure.Main" />
+        <option name="description" value="" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="DepartureAppFX.jar">
+        <element id="module-output" name="DepartureAppFX" />
+      </element>
+    </root>
+  </artifact>
+</component>
