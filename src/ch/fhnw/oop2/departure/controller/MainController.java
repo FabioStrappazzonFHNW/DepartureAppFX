@@ -1,11 +1,13 @@
 package ch.fhnw.oop2.departure.controller;
 
-import ch.fhnw.oop2.departure.Main;
 import ch.fhnw.oop2.departure.model.Departure;
+import ch.fhnw.oop2.departure.model.Timetable;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,31 +17,57 @@ import java.util.ResourceBundle;
  */
 public class MainController implements Initializable {
     private ResourceBundle bundle;
-    private Main main;
+    private Timetable timetable;
+    private Departure  selectedDeparture;
 
     @FXML
-    private TableView<Departure> departureTable;
+    private TableView<Departure> tvDepartureTable;
     @FXML
-    private TableColumn<Departure, String> id;
+    private TableColumn<Departure, String> tcId;
     @FXML
-    private TableColumn<Departure, String> departureTime;
+    private TableColumn<Departure, String> tcDepartureTime;
     @FXML
-    private TableColumn<Departure, String> destination;
+    private TableColumn<Departure, String> tcDestination;
     @FXML
-    private TableColumn<Departure, String> platform;
-
+    private TableColumn<Departure, String> tcPlatform;
+    @FXML
+    private TextField txtDepartureTime;
+    @FXML
+    private TextField txtDestination;
+    @FXML
+    private TextField txtPlatform;
+    @FXML
+    private TextField txtTrainNumber;
+    @FXML
+    private TextArea txtStops;
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         bundle = resources;
-        id.setCellValueFactory(cellData -> cellData.getValue().idProperty());
-        departureTime.setCellValueFactory(cellData -> cellData.getValue().departureTimeProperty());
-        destination.setCellValueFactory(cellData -> cellData.getValue().destinationProperty());
-        platform.setCellValueFactory(cellData -> cellData.getValue().platformProperty());
+        tcId.setCellValueFactory(cellData -> cellData.getValue().idProperty());
+        tcDepartureTime.setCellValueFactory(cellData -> cellData.getValue().departureTimeProperty());
+        tcDestination.setCellValueFactory(cellData -> cellData.getValue().destinationProperty());
+        tcPlatform.setCellValueFactory(cellData -> cellData.getValue().platformProperty());
+
+        /*txtDepartureTime.;
+        txtDestination;
+        txtPlatform;
+        txtStops;
+        txtTrainNumber;*/
+        tvDepartureTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection)->{
+        	//oldSelection.departureTimeProperty().re
+        	selectedDeparture = newSelection;
+        	if(oldSelection != null){
+        		oldSelection.departureTimeProperty().unbind();
+        		txtDepartureTime.textProperty().unbind();
+        	}
+        	selectedDeparture.departureTimeProperty().bind(txtDepartureTime.textProperty());
+        });
     }
 
-    public void setMain(Main main) {
-        this.main = main;
+    public void setTimetable(Timetable timetable) {
+        this.timetable = timetable;
         // Add observable list data to the table
-        departureTable.setItems(main.getDeparturesData());
+        tvDepartureTable.setItems(timetable.getDeparturesData());
     }
 }
