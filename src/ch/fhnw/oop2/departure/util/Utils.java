@@ -9,13 +9,15 @@ import java.util.stream.Collectors;
  * Created by ernst on 26.04.2016.
  */
 public class Utils {
-    public static List<List<String>> readCSV(File f, String seperator) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(f.getPath()))) {
-            return reader.lines().skip(1)
-                    .map(line -> Arrays.asList(line.split(seperator)))
-                    .collect(Collectors.toList());
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
-    }
+	public static List<List<String>> readCSV(File file, String seperator) {
+		try (BufferedReader reader = new BufferedReader(
+				new InputStreamReader(new FileInputStream(file), "UTF8"))) {
+			return reader.lines()
+					.skip(1)
+					.map(line -> Arrays.asList(line.split(seperator)))
+					.collect(Collectors.toList());
+		} catch (IOException e) {
+			throw new UncheckedIOException(e);
+		} 
+	}
 }
