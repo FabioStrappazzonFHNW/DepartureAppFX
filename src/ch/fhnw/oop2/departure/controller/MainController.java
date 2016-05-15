@@ -61,7 +61,7 @@ public class MainController implements Initializable {
         		oldSelection.departureTimeProperty().unbind();
         		txtDepartureTime.textProperty().unbind();
         	}
-        	selectedDeparture.departureTimeProperty().bind(txtDepartureTime.textProperty());
+        	//selectedDeparture.departureTimeProperty().bind(txtDepartureTime.textProperty());
         });
     }
 
