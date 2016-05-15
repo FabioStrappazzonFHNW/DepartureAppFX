@@ -1,70 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.input.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<BorderPane prefHeight="670.0" prefWidth="1042.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
 
-<BorderPane prefHeight="670.0" prefWidth="1042.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.fhnw.oop2.departure.controller.RootLayoutController">
-    <top>
-        <Pane BorderPane.alignment="CENTER">
-            <children>
-                <HBox>
-                    <children>
-                        <Button mnemonicParsing="false">
-                            <graphic>
-                                <ImageView>
-                                    <image>
-                                        <Image url="@icons/ic_save_black_24dp_1x.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button mnemonicParsing="false">
-                            <graphic>
-                                <ImageView>
-                                    <image>
-                                        <Image url="@icons/ic_add_circle_black_24dp_1x.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button mnemonicParsing="false">
-                            <graphic>
-                                <ImageView>
-                                    <image>
-                                        <Image url="@icons/ic_clear_black_24dp_1x.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button mnemonicParsing="false">
-                            <graphic>
-                                <ImageView>
-                                    <image>
-                                        <Image url="@icons/ic_undo_black_24dp_1x.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button mnemonicParsing="false">
-                            <graphic>
-                                <ImageView>
-                                    <image>
-                                        <Image url="@icons/ic_redo_black_24dp_1x.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                    </children>
-                </HBox>
-                <Button fx:id="toggleLanguage" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="997.0" layoutY="4.0" mnemonicParsing="false" onAction="#toggleLanguage" text="DE" />
-            </children>
-        </Pane>
-    </top>
 </BorderPane>

@@ -1,23 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<BorderPane prefHeight="670.0" prefWidth="1042.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ch.fhnw.oop2.departure.controller.MainController">
+    <top>
+        <Pane BorderPane.alignment="CENTER">
+            <children>
+                <HBox>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#save">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/ic_save_black_24dp_1x.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#add">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/ic_add_circle_black_24dp_1x.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#clear">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/ic_clear_black_24dp_1x.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#undo">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/ic_undo_black_24dp_1x.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#redo">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/ic_redo_black_24dp_1x.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+                <Button fx:id="toggleLanguage" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="997.0"
+                        layoutY="4.0" mnemonicParsing="false" onAction="#toggleLanguage" text="%language"/>
+            </children>
+        </Pane>
+    </top>
+    <center>
 
-<AnchorPane prefHeight="622.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.fhnw.oop2.departure.controller.MainController">
-    <children>
-        <BorderPane layoutX="-19.0" layoutY="-5.0" prefHeight="209.0" prefWidth="244.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <BorderPane layoutX="-19.0" layoutY="-5.0" prefHeight="209.0" prefWidth="244.0"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
             <center>
-                <SplitPane dividerPositions="0.4731610337972167" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <SplitPane dividerPositions="0.4731610337972167" prefHeight="160.0" prefWidth="200.0"
+                           BorderPane.alignment="CENTER">
                     <items>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                             <children>
-                                <TableView fx:id="tvDepartureTable" layoutX="18.0" layoutY="72.0" prefHeight="438.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <TableView fx:id="tvDepartureTable" layoutX="18.0" layoutY="72.0"
+                                           prefHeight="438.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0" editable="true">
                                     <columns>
-                                        <TableColumn fx:id="tcId" prefWidth="34.0" text="%id" />
-                                        <TableColumn fx:id="tcDepartureTime" prefWidth="93.0" text="%departureTime" />
-                                        <TableColumn fx:id="tcDestination" prefWidth="171.0" text="%destination" />
-                                        <TableColumn fx:id="tcPlatform" prefWidth="96.0" text="%platform" />
+                                        <TableColumn fx:id="tcId" prefWidth="34.0" text="%id" editable="true"/>
+                                        <TableColumn fx:id="tcDepartureTime" prefWidth="93.0"
+                                                     text="%departureTime" editable="true"/>
+                                        <TableColumn fx:id="tcDestination" prefWidth="171.0" text="%destination"
+                                                     editable="true"/>
+                                        <TableColumn fx:id="tcPlatform" prefWidth="96.0" text="%platform"
+                                                     editable="true"/>
                                     </columns>
                                 </TableView>
                             </children>
@@ -26,27 +94,33 @@
                             <children>
                                 <GridPane layoutX="14.0">
                                     <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="83.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="179.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0"
+                                                           prefWidth="83.0"/>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0"
+                                                           prefWidth="179.0"/>
                                     </columnConstraints>
                                     <rowConstraints>
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                                     </rowConstraints>
                                     <children>
-                                        <Label text="%departureTime" />
-                                        <Label text="%destination" GridPane.rowIndex="1" />
-                                        <Label text="%trainNumber" GridPane.rowIndex="2" />
-                                        <Label text="%platform" GridPane.rowIndex="3" />
-                                        <Label text="%stops" GridPane.rowIndex="4" />
-                                        <TextField fx:id="txtDepartureTime" GridPane.columnIndex="1" />
-                                        <TextField fx:id="txtDestination" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <TextField fx:id="txtTrainNumber" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <TextField fx:id="txtPlatform" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                        <TextArea fx:id="txtStops" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        <Label text="%departureTime"/>
+                                        <Label text="%destination" GridPane.rowIndex="1"/>
+                                        <Label text="%trainNumber" GridPane.rowIndex="2"/>
+                                        <Label text="%platform" GridPane.rowIndex="3"/>
+                                        <Label text="%stops" GridPane.rowIndex="4"/>
+                                        <TextField fx:id="txtDepartureTime" GridPane.columnIndex="1"/>
+                                        <TextField fx:id="txtDestination" GridPane.columnIndex="1"
+                                                   GridPane.rowIndex="1"/>
+                                        <TextField fx:id="txtTrainNumber" GridPane.columnIndex="1"
+                                                   GridPane.rowIndex="2"/>
+                                        <TextField fx:id="txtPlatform" GridPane.columnIndex="1"
+                                                   GridPane.rowIndex="3"/>
+                                        <TextArea fx:id="txtStops" prefHeight="200.0" prefWidth="200.0"
+                                                  GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                                     </children>
                                 </GridPane>
                             </children>
@@ -55,5 +129,6 @@
                 </SplitPane>
             </center>
         </BorderPane>
-    </children>
-</AnchorPane>
+    </center>
+</BorderPane>
+
