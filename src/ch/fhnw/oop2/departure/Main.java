@@ -2,6 +2,8 @@ package ch.fhnw.oop2.departure;
 
 import ch.fhnw.oop2.departure.controller.MainController;
 import ch.fhnw.oop2.departure.model.Timetable;
+import ch.fhnw.oop2.departure.ws4cLib.BorderPaneUI;
+import ch.fhnw.oop2.departure.ws4cLib.ClockSBBUI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -43,6 +45,11 @@ public class Main extends Application {
 
         // Show the scene containing the root layout.
         Scene scene = new Scene(rootLayout);
+
+        String fonts = getClass().getResource("fonts.css").toExternalForm();
+        String stylesheet = getClass().getResource("styles.css").toExternalForm();
+        scene.getStylesheets().addAll(stylesheet, fonts);
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -58,6 +65,9 @@ public class Main extends Application {
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
+
+        mainView.setRight(new BorderPaneUI());
+        new ClockSBBUI();
 
         // Set person overview into the center of root layout.
         rootLayout.setCenter(mainView);
