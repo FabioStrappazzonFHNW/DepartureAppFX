@@ -4,13 +4,16 @@ import ch.fhnw.oop2.departure.Main;
 import ch.fhnw.oop2.departure.model.Departure;
 import ch.fhnw.oop2.departure.model.Timetable;
 import ch.fhnw.oop2.departure.util.JavaFxUtils;
+import javafx.application.Platform;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.stage.FileChooser;
 
+import java.io.File;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -47,6 +50,7 @@ public class MainController implements Initializable {
 	private Button toggleLanguage;
 	@FXML
 	private TextField txtFilter;
+
 	@FXML
 	public void toggleLanguage(ActionEvent e) {
 		if (toggleLanguage.getText().equals("DE")) {
@@ -59,13 +63,13 @@ public class MainController implements Initializable {
 	@FXML
 	public void redo(ActionEvent actionEvent) {
 		//TODO redo
-		JavaFxUtils.createAlert("Info","Not yet implemented.","We haven't implemented <redo> yet.");
+		JavaFxUtils.createAlert("Info", "Not yet implemented.", "We haven't implemented <redo> yet.");
 	}
 
 	@FXML
 	public void undo(ActionEvent actionEvent) {
 		//TODO undo
-		JavaFxUtils.createAlert("Info","Not yet implemented.","We haven't implemented <undo> yet.");
+		JavaFxUtils.createAlert("Info", "Not yet implemented.", "We haven't implemented <undo> yet.");
 	}
 
 	@FXML
@@ -82,7 +86,15 @@ public class MainController implements Initializable {
 
 	@FXML
 	public void save(ActionEvent actionEvent) {
-		timetable.saveJSON();
+		FileChooser fileChooser = new FileChooser();
+		if (timetable.getFile() != null) {
+			fileChooser.setInitialFileName(timetable.getFile().getPath());
+		}
+		fileChooser.setTitle("Save File");
+		fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Json", "*.json"));
+		File f = fileChooser.showSaveDialog(main.getPrimaryStage());
+
+		timetable.saveJSON(f);
 	}
 
 
@@ -92,6 +104,11 @@ public class MainController implements Initializable {
 
 		toggleLanguage.setTooltip(new Tooltip(bundle.getString("tooltip")));
 
+		txtDepartureTime.setDisable(true);
+		txtTrainNumber.setDisable(true);
+		txtDestination.setDisable(true);
+		txtStops.setDisable(true);
+		txtPlatform.setDisable(true);
 
 		tcId.setCellValueFactory(cellData -> cellData.getValue().idProperty());
 		tcId.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -160,29 +177,43 @@ public class MainController implements Initializable {
 				txtDestination.setDisable(true);
 				txtStops.setDisable(true);
 				txtPlatform.setDisable(true);
+				timetable.setFile(null);
+
 			}
 		});
+		Platform.runLater(() -> {
+			if (timetable != null && timetable.getFile() == null && timetable.getDeparturesData().isEmpty()) {
+				if (JavaFxUtils.createYesNoAlert("Load Data", "Do you want to load some Data?", "", "Yes", "No")) {
+					FileChooser fileChooser = new FileChooser();
+					fileChooser.setTitle("Open Resource File");
+					fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Comma Separated Value", "*.csv"));
+
+					File f = fileChooser.showOpenDialog(main.getPrimaryStage());
+					if (f != null) {
+						timetable.load(f);
+					}
+				}
+			}
+		});
+
 	}
 
 	public void setTimetable(Timetable timetable) {
 		this.timetable = timetable;
 		FilteredList<Departure> filteredData = new FilteredList<>(timetable.getDeparturesData(), p -> true);
 		txtFilter.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(departure -> {
-                // If filter text is empty, display all persons.
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
+			filteredData.setPredicate(departure -> {
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+				String lowerCaseFilter = newValue.toLowerCase();
+				return departure.getDepartureTime().toLowerCase().contains(lowerCaseFilter) ||
+						departure.getDestination().toLowerCase().contains(lowerCaseFilter) ||
+						departure.getId().toLowerCase().contains(lowerCaseFilter) ||
+						departure.getPlatform().toLowerCase().contains(lowerCaseFilter);
 
-                // Compare first name and last name of every person with filter text.
-                String lowerCaseFilter = newValue.toLowerCase();
-                return departure.getDepartureTime().toLowerCase().contains(lowerCaseFilter) ||
-                		departure.getDestination().toLowerCase().contains(lowerCaseFilter) ||
-                		departure.getId().toLowerCase().contains(lowerCaseFilter) ||
-                		departure.getPlatform().toLowerCase().contains(lowerCaseFilter);
-                
-            });
-        });
+			});
+		});
 		tvDepartureTable.setItems(filteredData);
 	}
 

@@ -1,39 +1,37 @@
 package ch.fhnw.oop2.departure.model;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.UncheckedIOException;
-import java.io.Writer;
+import ch.fhnw.oop2.departure.util.JavaFxUtils;
+import ch.fhnw.oop2.departure.util.SimpleStringPropertyDeserializer;
+import ch.fhnw.oop2.departure.util.SimpleStringPropertySerializer;
+import ch.fhnw.oop2.departure.util.Utils;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-
-import ch.fhnw.oop2.departure.util.JavaFxUtils;
-import ch.fhnw.oop2.departure.util.SimpleStringPropertyDeserializer;
-import ch.fhnw.oop2.departure.util.SimpleStringPropertySerializer;
-import ch.fhnw.oop2.departure.util.Utils;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 public class Timetable {
 	private ObservableList<Departure> departures = FXCollections.observableArrayList();
-	
-	private File file;
 
-	public Timetable(File file) {
+	private File file = null;
+
+	public File getFile() {
+		return file;
+	}
+
+	public void setFile(File file) {
+		this.file = file;
+	}
+
+	public void load(File file) {
 		this.file = file;
 		if (file.getAbsolutePath().endsWith(".csv")) {
 			loadCSV(file);
@@ -62,10 +60,9 @@ public class Timetable {
 	public void loadCSV(File file) {
 		List<List<String>> csv = Utils.readCSV(file, ";");
 		csv.stream().skip(1).forEach(l -> {
-			try {// TODO not so good, ignores faulty lines
+			try {
 				departures.add(new Departure(l.get(0), l.get(1), l.get(2), l.get(3), l.get(4), l.get(5)));
 			} catch (Exception e) {
-				// System.out.println(l); //TODO empty catch^^
 			}
 		});
 	}
@@ -85,7 +82,7 @@ public class Timetable {
 
 	}
 
-	public void saveJSON() {
+	public void saveJSON(File file) {
 		try {
 			if (file.getAbsolutePath().endsWith(".csv")) {
 				file = Files.move(file.toPath(), Paths.get(file.getAbsolutePath().replace(".csv", ".json")),
@@ -97,12 +94,9 @@ public class Timetable {
 				out.write(result);
 				JavaFxUtils.createTextboxAlert("Saved Departures", "Exported departures to json",
 						"Departures saved in File. Expand to view json.", result);
-			} catch (IOException e) {
-				new UncheckedIOException(e);
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			new UncheckedIOException(e);
 		}
 	}
 
@@ -114,6 +108,5 @@ public class Timetable {
 		return gsonb.create();
 	}
 
-	
 
 }
