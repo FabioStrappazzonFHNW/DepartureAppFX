@@ -4,10 +4,7 @@ import ch.fhnw.oop2.departure.controller.MainController;
 import ch.fhnw.oop2.departure.model.Timetable;
 import ch.fhnw.oop2.departure.util.JavaFxUtils;
 import ch.fhnw.oop2.departure.util.Utils;
-import ch.fhnw.oop2.departure.ws4cLib.BorderPaneUI;
-import ch.fhnw.oop2.departure.ws4cLib.ClockSBBUI;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -22,79 +19,71 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Main extends Application {
-    private Stage primaryStage;
-    private BorderPane rootLayout;
-    private Timetable timetable;
+	private Stage primaryStage;
+	private BorderPane rootLayout;
+	private Timetable timetable;
 
-    @Override
-    public void start(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Departure App FX");
-
-
-        // Load root layout from fxml file.
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class
-                .getResource("view/RootLayout.fxml"));
-        try {
-            rootLayout = loader.load();
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
-        
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Resource File");
-        fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Json", "*.json"), new ExtensionFilter("Comma Separated Value", "*.csv"));
-        
-        File f  = fileChooser.showOpenDialog(primaryStage);
-        if(f == null){
-        	
-        	JavaFxUtils.createTextboxAlert("Warning", "", "Can't be started without a file.", "");
-        	Utils.shutdown();
-        }
-        
-        timetable = new Timetable(f);
+	@Override
+	public void start(Stage primaryStage) {
+		this.primaryStage = primaryStage;
+		this.primaryStage.setTitle("Departure App FX");
 
 
-        loadMainView(new Locale("en", "EN"));
+		// Load root layout from fxml file.
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class
+				.getResource("view/RootLayout.fxml"));
+		try {
+			rootLayout = loader.load();
+		} catch (IOException e) {
+			throw new UncheckedIOException(e);
+		}
 
-        // Show the scene containing the root layout.
-        Scene scene = new Scene(rootLayout);
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("Open Resource File");
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Json", "*.json"), new ExtensionFilter("Comma Separated Value", "*.csv"));
 
-        String fonts = getClass().getResource("fonts.css").toExternalForm();
-        String stylesheet = getClass().getResource("styles.css").toExternalForm();
-        scene.getStylesheets().addAll(stylesheet, fonts);
+		File f = fileChooser.showOpenDialog(primaryStage);
+		if (f == null) {
 
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
+			JavaFxUtils.createTextboxAlert("Warning", "", "Can't be started without a file.", "");
+			Utils.shutdown();
+		}
 
-    public void loadMainView(Locale locale) {
+		timetable = new Timetable(f);
 
-        FXMLLoader loader = new FXMLLoader();
-        loader.setResources(ResourceBundle.getBundle("bundles.localization", locale));
-        loader.setLocation(Main.class.getResource("view/Main.fxml"));
-        BorderPane mainView;
-        try {
-            mainView = loader.load();
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
 
-        mainView.setRight(new BorderPaneUI());
-        new ClockSBBUI();
+		loadMainView(new Locale("en", "EN"));
 
-        // Set person overview into the center of root layout.
-        rootLayout.setCenter(mainView);
+		// Show the scene containing the root layout.
+		Scene scene = new Scene(rootLayout);
 
-        // Give the controller access to the timetable.
-        MainController controller = loader.getController();
-        controller.setTimetable(timetable);
-        controller.setMain(this);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
 
-    }
+	public void loadMainView(Locale locale) {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+		FXMLLoader loader = new FXMLLoader();
+		loader.setResources(ResourceBundle.getBundle("bundles.localization", locale));
+		loader.setLocation(Main.class.getResource("view/Main.fxml"));
+		BorderPane mainView;
+		try {
+			mainView = loader.load();
+		} catch (IOException e) {
+			throw new UncheckedIOException(e);
+		}
+
+		rootLayout.setCenter(mainView);
+
+		// Give the controller access to the timetable.
+		MainController controller = loader.getController();
+		controller.setTimetable(timetable);
+		controller.setMain(this);
+
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
 }
