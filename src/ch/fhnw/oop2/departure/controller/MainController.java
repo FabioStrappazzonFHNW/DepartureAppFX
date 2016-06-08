@@ -23,7 +23,6 @@ public class MainController implements Initializable {
 	private Timetable timetable;
 	private Departure departureProxy = new Departure();
 
-
 	@FXML
 	private TableView<Departure> tvDepartureTable;
 	@FXML
@@ -48,7 +47,6 @@ public class MainController implements Initializable {
 	private Button toggleLanguage;
 	@FXML
 	private TextField txtFilter;
-
 	@FXML
 	public void toggleLanguage(ActionEvent e) {
 		if (toggleLanguage.getText().equals("DE")) {
@@ -61,11 +59,13 @@ public class MainController implements Initializable {
 	@FXML
 	public void redo(ActionEvent actionEvent) {
 		//TODO redo
+		JavaFxUtils.createAlert("Info","Not yet implemented.","We haven't implemented <redo> yet.");
 	}
 
 	@FXML
 	public void undo(ActionEvent actionEvent) {
 		//TODO undo
+		JavaFxUtils.createAlert("Info","Not yet implemented.","We haven't implemented <undo> yet.");
 	}
 
 	@FXML
@@ -89,6 +89,10 @@ public class MainController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		bundle = resources;
+
+		toggleLanguage.setTooltip(new Tooltip(bundle.getString("tooltip")));
+
+
 		tcId.setCellValueFactory(cellData -> cellData.getValue().idProperty());
 		tcId.setCellFactory(TextFieldTableCell.forTableColumn());
 		tcId.setOnEditCommit((t) ->
@@ -139,17 +143,29 @@ public class MainController implements Initializable {
 				departureProxy.viaProperty().unbindBidirectional(oldValue.viaProperty());
 				departureProxy.platformProperty().unbindBidirectional(oldValue.platformProperty());
 			}
-			departureProxy.trainNumberProperty().bindBidirectional(newValue.trainNumberProperty());
-			departureProxy.departureTimeProperty().bindBidirectional(newValue.departureTimeProperty());
-			departureProxy.destinationProperty().bindBidirectional(newValue.destinationProperty());
-			departureProxy.viaProperty().bindBidirectional(newValue.viaProperty());
-			departureProxy.platformProperty().bindBidirectional(newValue.platformProperty());
+			if (newValue != null) {
+				departureProxy.trainNumberProperty().bindBidirectional(newValue.trainNumberProperty());
+				departureProxy.departureTimeProperty().bindBidirectional(newValue.departureTimeProperty());
+				departureProxy.destinationProperty().bindBidirectional(newValue.destinationProperty());
+				departureProxy.viaProperty().bindBidirectional(newValue.viaProperty());
+				departureProxy.platformProperty().bindBidirectional(newValue.platformProperty());
+				txtDepartureTime.setDisable(false);
+				txtTrainNumber.setDisable(false);
+				txtDestination.setDisable(false);
+				txtStops.setDisable(false);
+				txtPlatform.setDisable(false);
+			} else {
+				txtDepartureTime.setDisable(true);
+				txtTrainNumber.setDisable(true);
+				txtDestination.setDisable(true);
+				txtStops.setDisable(true);
+				txtPlatform.setDisable(true);
+			}
 		});
 	}
 
 	public void setTimetable(Timetable timetable) {
 		this.timetable = timetable;
-		// Add observable list data to the table
 		FilteredList<Departure> filteredData = new FilteredList<>(timetable.getDeparturesData(), p -> true);
 		txtFilter.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(departure -> {

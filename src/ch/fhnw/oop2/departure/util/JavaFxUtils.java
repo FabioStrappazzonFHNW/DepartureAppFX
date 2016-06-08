@@ -202,6 +202,20 @@ public class JavaFxUtils {
         alert.showAndWait();
     }
 
+	/**
+	 * Creates an alert.
+	 *
+	 * @param title the title
+	 * @param header the header
+	 * @param contentText the content text
+	 */
+	public static void createAlert(String title, String header, String contentText) {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle(title);
+		alert.setHeaderText(header);
+		alert.setContentText(contentText);
+		alert.showAndWait();
+	}
 
     /**
      * Creates the error alert j unit.

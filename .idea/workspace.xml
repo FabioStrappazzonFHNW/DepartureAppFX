@@ -5,41 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5a77116-e806-48a8-90a4-ce7a8a2b4ef5" name="Default" comment="Moved buttonbar from rootlayout to main&#10;localized language button&#10;added csv export&#10;added departure add&#10;added deparured delete&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Lato/Lato-Bla.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Lato/Lato-Bol.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Lato/Lato-Hai.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Lato/Lato-Lig.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Lato/Lato-Reg.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Thin.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/ds_digital/DIGITAL.TXT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGI.TTF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGIB.TTF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGII.TTF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGIT.TTF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/img/SBB_ICons.ai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/AppStarter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/BorderPaneUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/CellUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/ClockSBBUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/ClockUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/DirectionUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/HeaderUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/IconsUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/ListUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/PresentationModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/Station.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/StationCell.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/TrainRail.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/stylesheet.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/application.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/bundles/localization_de.properties" afterPath="$PROJECT_DIR$/res/bundles/localization_de.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/bundles/localization_en.properties" afterPath="$PROJECT_DIR$/res/bundles/localization_en.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/JavaFxUtils.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/JavaFxUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/Main.fxml" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/Main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/RootLayout.fxml" />
     </list>
     <ignored path="DepartureAppFX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +47,11 @@
         <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2406#2407#0" expanded="true" />
-                <element signature="e#2425#2426#0" expanded="true" />
+                <element signature="e#2404#2405#0" expanded="true" />
+                <element signature="e#2423#2424#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,21 +60,13 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37554586">
-              <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.28646287">
+              <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2150#2151#0" expanded="true" />
+                <element signature="e#2177#2178#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaFxUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/JavaFxUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="29" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="29" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -108,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Timetable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="65" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1392#1393#0" expanded="true" />
@@ -140,6 +107,7 @@
         <option value="XSLT Stylesheet" />
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -168,18 +136,21 @@
         <option value="$PROJECT_DIR$/res/internalization/en.properties" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/JavaFXUtils.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/RootLayoutController.java" />
-        <option value="$PROJECT_DIR$/res/bundles/localization_de.properties" />
-        <option value="$PROJECT_DIR$/res/bundles/localization_en.properties" />
-        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/Main.fxml" />
         <option value="$PROJECT_DIR$/bin/olten.csv" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/Utils.java" />
-        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/RootLayout.fxml" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Departure.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/AppStarter.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/TrainRail.java" />
-        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Timetable.java" />
+        <option value="$PROJECT_DIR$/res/stylesheet.css" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/RootLayout.fxml" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/stylesheet.css" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/JavaFxUtils.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/res/bundles/localization_de.properties" />
+        <option value="$PROJECT_DIR$/res/bundles/localization_en.properties" />
       </list>
     </option>
   </component>
@@ -275,6 +246,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="departure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -296,6 +289,46 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resource Bundle 'localization'" />
+              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -310,6 +343,7 @@
     <property name="project.structure.side.proportion" value="0.20404412" />
     <property name="SearchEverywhereHistoryKey" value="javaf&#9;FILE&#9;file://G:/IDEtoGo/GITHUB/DepartureAppFX/src/ch/fhnw/oop2/departure/util/JavaFxUtils.java&#10;Indents&#9;null&#9;null&#10;inden&#9;ACTION&#9;EditorIndentLineOrSelection&#10;formatting&#9;null&#9;null&#10;format&#9;ACTION&#9;ReformatCode&#10;Clean&#9;ACTION&#9;CodeCleanup&#10;clean&#9;ACTION&#9;CodeCleanup" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_d76a6a98c9315931ec4927243517bc09e9b731a0/cmd/git.exe" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -320,11 +354,11 @@
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res\internalization" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res" />
+      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure\view" />
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure" />
+      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res" />
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\libs" />
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure\view\icons" />
-      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure\view" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -952,7 +986,7 @@
       <workItem from="1462022631172" duration="133000" />
       <workItem from="1463317508285" duration="11814000" />
       <workItem from="1464257879344" duration="87000" />
-      <workItem from="1465396258116" duration="13303000" />
+      <workItem from="1465396258116" duration="16767000" />
     </task>
     <task id="LOCAL-00001" summary="Moved buttonbar from rootlayout to main&#10;localized language button&#10;added csv export&#10;added departure add&#10;added deparured delete&#10;">
       <created>1463353732058</created>
@@ -964,7 +998,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37355000" />
+    <option name="totallyTimeSpent" value="40819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
@@ -981,6 +1015,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19738652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977992" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41315946" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15866667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -992,7 +1027,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41320553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1028,8 +1062,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1040,6 +1074,8 @@
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2150#2151#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1050,8 +1086,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1062,6 +1098,8 @@
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2150#2151#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1072,8 +1110,8 @@
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1107,8 +1145,8 @@
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1130,8 +1168,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1172,8 +1210,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1184,8 +1222,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1205,13 +1243,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../JAVA/jdk-8u74/src.zip!/java/nio/file/OpenOption.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5381026">
@@ -1226,52 +1257,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/bundles/localization_de.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49344262">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/Main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.16410257">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../JAVA/jdk-8u74/javafx-src.zip!/com/sun/glass/ui/InvokeLaterDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33281493">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/RootLayout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24501425">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/bundles/localization_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.057029177">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1287,22 +1276,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Departure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
-          </folding>
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Timetable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="65" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1392#1393#0" expanded="true" />
@@ -1315,28 +1300,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Departure.java">
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/RootLayout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15412186">
+          <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../JAVA/jdk-8u74/javafx-src.zip!/javafx/scene/control/Tooltip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327511">
+          <caret line="164" column="11" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/data/olten.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08317215">
+          <caret line="0" column="281" selection-start-line="0" selection-start-column="281" selection-end-line="0" selection-end-column="283" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/JavaFxUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="29" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.54934496">
+          <caret line="215" column="42" selection-start-line="215" selection-start-column="42" selection-end-line="215" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/bundles/localization_en.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35374773">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/bundles/localization_de.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35374773">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/Main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41266796">
+          <caret line="61" column="104" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="104" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37554586">
-          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.28646287">
+          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2150#2151#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
           </folding>
         </state>
       </provider>
