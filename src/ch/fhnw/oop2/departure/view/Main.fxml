@@ -5,9 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="670.0" prefWidth="1042.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="ch.fhnw.oop2.departure.controller.MainController">
+<BorderPane prefHeight="670.0" prefWidth="1042.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.fhnw.oop2.departure.controller.MainController">
     <top>
         <Pane BorderPane.alignment="CENTER">
             <children>
@@ -60,7 +58,7 @@
                         </Button>
                     </children>
                 </HBox>
-                <Button fx:id="toggleLanguage" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="997.0" layoutY="4.0" mnemonicParsing="false" onAction="#toggleLanguage" text="%language" />
+                <Button fx:id="toggleLanguage" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="953.0" layoutY="4.0" mnemonicParsing="false" onAction="#toggleLanguage" text="%language" />
             <TextField fx:id="txtFilter" layoutX="200.0" layoutY="4.0" promptText="%filter" />
             </children>
         </Pane>
@@ -85,7 +83,7 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                             <children>
-                                <GridPane layoutX="14.0">
+                                <GridPane layoutX="14.0" prefHeight="387.0" prefWidth="308.0">
                                     <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="83.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="179.0" />
@@ -94,8 +92,8 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
                                         <Label text="%departureTime" />
@@ -107,7 +105,7 @@
                                         <TextField fx:id="txtDestination" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                         <TextField fx:id="txtTrainNumber" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                         <TextField fx:id="txtPlatform" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                        <TextArea fx:id="txtStops" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        <TextArea fx:id="txtStops" prefHeight="50.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                     </children>
                                 </GridPane>
                             </children>
