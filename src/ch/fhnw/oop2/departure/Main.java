@@ -2,10 +2,15 @@ package ch.fhnw.oop2.departure;
 
 import ch.fhnw.oop2.departure.controller.MainController;
 import ch.fhnw.oop2.departure.model.Timetable;
+import ch.fhnw.oop2.departure.util.JavaFxUtils;
+import ch.fhnw.oop2.departure.util.Utils;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -34,9 +39,19 @@ public class Main extends Application {
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
-
-        timetable = new Timetable(new File(
-                getClass().getClassLoader().getResource("olten.csv").getFile()));
+        
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Resource File");
+        fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Json", "*.json"), new ExtensionFilter("Comma Separated Value", "*.csv"));
+        
+        File f  = fileChooser.showOpenDialog(primaryStage);
+        if(f == null){
+        	
+        	JavaFxUtils.createTextboxAlert("Warning", "", "Can't be started without a file.", "");
+        	Utils.shutdown();
+        }
+        
+        timetable = new Timetable(f);
 
 
         loadMainView(new Locale("en", "EN"));

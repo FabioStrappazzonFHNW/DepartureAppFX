@@ -74,7 +74,8 @@ public class MainController implements Initializable {
 
     @FXML
     public void save(ActionEvent actionEvent) {
-        timetable.saveCSV();
+        //timetable.saveCSV();
+    	timetable.saveJSON();
     }
 
 

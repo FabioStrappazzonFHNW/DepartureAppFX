@@ -53,4 +53,7 @@ public class Utils {
         }
         return csvString.toString();
     }
+    public static void shutdown(){
+    	System.exit(0);
+    }
 }
