@@ -12,10 +12,18 @@ public class Departure {
     final private SimpleStringProperty via;
     final private SimpleStringProperty platform;
 
+    public Departure() {
+        this.id = new SimpleStringProperty("");
+        this.departureTime = new SimpleStringProperty("");
+        this.trainNumber = new SimpleStringProperty("");
+        this.destination = new SimpleStringProperty("");
+        this.via = new SimpleStringProperty("");
+        this.platform = new SimpleStringProperty("");
+    }
+
     public Departure(String id, String departureTime,
                      String trainNumber, String destination,
                      String via, String platform) {
-
         this.id = new SimpleStringProperty(id);
         this.departureTime = new SimpleStringProperty(departureTime);
         this.trainNumber = new SimpleStringProperty(trainNumber);
@@ -24,7 +32,6 @@ public class Departure {
         this.platform = new SimpleStringProperty(platform);
 
     }
-
 
     //Getters and Setters
     public String getId() {
