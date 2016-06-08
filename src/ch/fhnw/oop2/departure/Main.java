@@ -57,7 +57,6 @@ public class Main extends Application {
 
 		// Show the scene containing the root layout.
 		Scene scene = new Scene(rootLayout);
-
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
@@ -73,7 +72,6 @@ public class Main extends Application {
 		} catch (IOException e) {
 			throw new UncheckedIOException(e);
 		}
-
 		rootLayout.setCenter(mainView);
 
 		// Give the controller access to the timetable.
