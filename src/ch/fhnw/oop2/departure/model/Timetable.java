@@ -5,11 +5,13 @@ import ch.fhnw.oop2.departure.util.Utils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.UncheckedIOException;
-import java.nio.file.Files;
-import java.nio.file.StandardOpenOption;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +50,7 @@ public class Timetable {
             try {//TODO not so good, ignores faulty lines
                 departures.add(new Departure(l.get(0), l.get(1), l.get(2), l.get(3), l.get(4), l.get(5)));
             } catch (Exception e) {
-                // System.out.println(l); //TODO empty catch^^
+               // System.out.println(l); //TODO empty catch^^
             }
         });
         headers = csv.get(0);
@@ -69,14 +71,14 @@ public class Timetable {
             temp.add(d.getPlatform());
             data.add(temp);
         });
+        	try (Writer out = new BufferedWriter(new OutputStreamWriter(
+            	    new FileOutputStream(file), "UTF-8"))){
 
-        try {
-            String csv = Utils.createCSVString(data, ";");
-            Files.write(file.toPath(), csv.getBytes(), StandardOpenOption.WRITE);
-            JavaFxUtils.createTextboxAlert("Saved Departures", "Exported departures to csv", "Departures saved in File. Expand to view csv.", csv);
-        } catch (IOException e) {
-            new UncheckedIOException(e);
-        }
+        	    out.write(Utils.createCSVString(data, ";"));
+        	    JavaFxUtils.createTextboxAlert("Saved Departures", "Exported departures to csv", "Departures saved in File. Expand to view csv.", "");
+        	} catch(IOException e){
+                new UncheckedIOException(e);
+            }
     }
 
 }

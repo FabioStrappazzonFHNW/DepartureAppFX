@@ -46,10 +46,11 @@ public class Utils {
                         reduce((t, u) -> t + seperator + u).
                         get() + seperator)
         );
-        String csvString = "";
+        StringBuilder csvString = new StringBuilder();
         for (String line : csv) {
-            csvString += line + "\n";
+        	csvString.append(line);
+        	csvString.append("\n");
         }
-        return csvString;
+        return csvString.toString();
     }
 }
