@@ -19,7 +19,6 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
     private ResourceBundle bundle;
     private Timetable timetable;
-    private Departure selectedDeparture;
 
     @FXML
     private TableView<Departure> tvDepartureTable;
@@ -120,15 +119,15 @@ public class MainController implements Initializable {
         txtPlatform;
         txtStops;
         txtTrainNumber;*/
-        // tvDepartureTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection)->{
-        //oldSelection.departureTimeProperty().re
-        //selectedDeparture = newSelection;
-        //	if(oldSelection != null){
-        //	oldSelection.departureTimeProperty().unbind();
-        //	txtDepartureTime.textProperty().unbind();
-        //}
-        //selectedDeparture.departureTimeProperty().bind(txtDepartureTime.textProperty());
-        // });
+//        tvDepartureTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+//            oldSelection.departureTimeProperty().unbindBidirectional(txtDepartureTime.textProperty());
+//            selectedDeparture = newSelection;
+//            if (oldSelection != null) {
+//                oldSelection.departureTimeProperty().unbind();
+//                txtDepartureTime.textProperty().unbind();
+//            }
+//            selectedDeparture.departureTimeProperty().bind(txtDepartureTime.textProperty());
+//        });
     }
 
     public void setTimetable(Timetable timetable) {

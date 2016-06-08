@@ -2,6 +2,7 @@ package ch.fhnw.oop2.departure.model;
 
 import ch.fhnw.oop2.departure.util.JavaFxUtils;
 import ch.fhnw.oop2.departure.util.Utils;
+import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
