@@ -5,10 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5a77116-e806-48a8-90a4-ce7a8a2b4ef5" name="Default" comment="Moved buttonbar from rootlayout to main&#10;localized language button&#10;added csv export&#10;added departure add&#10;added deparured delete&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/Medusa-4.8.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Lato/Lato-Bla.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Lato/Lato-Bol.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Lato/Lato-Hai.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Lato/Lato-Lig.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Lato/Lato-Reg.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Light.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Medium.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/Roboto/Roboto-Thin.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGI.TTF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGIB.TTF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGII.TTF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/ds_digital/DS-DIGIT.TTF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/img/SBB_ICons.ai" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/fonts/ds_digital/DIGITAL.TXT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/AppStarter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/BorderPaneUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/CellUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/ClockSBBUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/ClockUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/DirectionUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/HeaderUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/IconsUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/ListUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/PresentationModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/Station.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/StationCell.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/TrainRail.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Departure.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Departure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Timetable.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Timetable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" afterPath="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" />
     </list>
     <ignored path="DepartureAppFX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,6 +56,13 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="DepartureAppFX" />
@@ -34,19 +73,31 @@
         <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2590#2591#0" expanded="true" />
+                <element signature="e#2618#2619#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java">
+      <file leaf-file-name="TrainRail.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/TrainRail.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.2489083">
-              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,6 +147,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AppStarter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/AppStarter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="18" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -137,11 +198,13 @@
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/Main.fxml" />
         <option value="$PROJECT_DIR$/bin/olten.csv" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/Utils.java" />
-        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/view/RootLayout.fxml" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Timetable.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Departure.java" />
         <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/AppStarter.java" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java" />
+        <option value="$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/TrainRail.java" />
       </list>
     </option>
   </component>
@@ -219,7 +282,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="departure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="departure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ws4cLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DepartureAppFX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -228,26 +363,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20404412" />
-    <property name="SearchEverywhereHistoryKey" value="Clean&#9;ACTION&#9;CodeCleanup&#10;clean&#9;ACTION&#9;CodeCleanup" />
+    <property name="SearchEverywhereHistoryKey" value="Indents&#9;null&#9;null&#10;inden&#9;ACTION&#9;EditorIndentLineOrSelection&#10;formatting&#9;null&#9;null&#10;format&#9;ACTION&#9;ReformatCode&#10;Clean&#9;ACTION&#9;CodeCleanup&#10;clean&#9;ACTION&#9;CodeCleanup" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_d76a6a98c9315931ec4927243517bc09e9b731a0/cmd/git.exe" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res" />
-      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res\icons" />
-      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res\internalization" />
-      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure\view" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\libs" />
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res" />
+      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure\ws4cLib" />
+      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res\icons" />
+      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res\internalization" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\res" />
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure" />
+      <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\libs" />
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure\view\icons" />
       <recent name="G:\IDEtoGo\GITHUB\DepartureAppFX\src\ch\fhnw\oop2\departure\view" />
     </key>
@@ -877,7 +1013,7 @@
       <workItem from="1462022631172" duration="133000" />
       <workItem from="1463317508285" duration="11814000" />
       <workItem from="1464257879344" duration="87000" />
-      <workItem from="1465396258116" duration="9340000" />
+      <workItem from="1465396258116" duration="12407000" />
     </task>
     <task id="LOCAL-00001" summary="Moved buttonbar from rootlayout to main&#10;localized language button&#10;added csv export&#10;added departure add&#10;added deparured delete&#10;">
       <created>1463353732058</created>
@@ -889,13 +1025,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33392000" />
+    <option name="totallyTimeSpent" value="36459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12752452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -903,11 +1039,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29164198" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19738652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977992" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15866667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -915,8 +1051,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41320553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -938,7 +1074,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java</url>
+          <line>81</line>
+          <properties class="ch.fhnw.oop2.departure.Main" method="main" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -953,6 +1097,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -973,6 +1119,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -993,6 +1141,8 @@
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1024,6 +1174,8 @@
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1045,6 +1197,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1085,6 +1239,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1095,6 +1251,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1201,34 +1359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/olten.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7472712">
-          <caret line="134" column="6" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/model/Departure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1255,13 +1385,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/util/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2489083">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.042086">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15736505">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/AppStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/fhnw/oop2/departure/ws4cLib/TrainRail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2489083">
+          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
