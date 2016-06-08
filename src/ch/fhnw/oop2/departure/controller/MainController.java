@@ -4,6 +4,7 @@ import ch.fhnw.oop2.departure.Main;
 import ch.fhnw.oop2.departure.model.Departure;
 import ch.fhnw.oop2.departure.model.Timetable;
 import ch.fhnw.oop2.departure.util.JavaFxUtils;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -44,7 +45,9 @@ public class MainController implements Initializable {
 	@FXML
 	private TextArea txtStops;
 	@FXML
-	Button toggleLanguage;
+	private Button toggleLanguage;
+	@FXML
+	private TextField txtFilter;
 
 	@FXML
 	public void toggleLanguage(ActionEvent e) {
@@ -79,7 +82,6 @@ public class MainController implements Initializable {
 
 	@FXML
 	public void save(ActionEvent actionEvent) {
-		//timetable.saveCSV();
 		timetable.saveJSON();
 	}
 
@@ -148,7 +150,24 @@ public class MainController implements Initializable {
 	public void setTimetable(Timetable timetable) {
 		this.timetable = timetable;
 		// Add observable list data to the table
-		tvDepartureTable.setItems(timetable.getDeparturesData());
+		FilteredList<Departure> filteredData = new FilteredList<>(timetable.getDeparturesData(), p -> true);
+		txtFilter.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(departure -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                // Compare first name and last name of every person with filter text.
+                String lowerCaseFilter = newValue.toLowerCase();
+                return departure.getDepartureTime().toLowerCase().contains(lowerCaseFilter) ||
+                		departure.getDestination().toLowerCase().contains(lowerCaseFilter) ||
+                		departure.getId().toLowerCase().contains(lowerCaseFilter) ||
+                		departure.getPlatform().toLowerCase().contains(lowerCaseFilter);
+                
+            });
+        });
+		tvDepartureTable.setItems(filteredData);
 	}
 
 	private Main main;
