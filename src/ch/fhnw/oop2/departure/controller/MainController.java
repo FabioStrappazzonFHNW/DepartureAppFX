@@ -19,6 +19,8 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
     private ResourceBundle bundle;
     private Timetable timetable;
+    private Departure departureProxy = new Departure();
+
 
     @FXML
     private TableView<Departure> tvDepartureTable;
@@ -114,21 +116,28 @@ public class MainController implements Initializable {
                 ).setPlatform(t.getNewValue())
         );
 
+        //Proxybinding
+        departureProxy.trainNumberProperty().bindBidirectional(txtTrainNumber.textProperty());
+        departureProxy.departureTimeProperty().bindBidirectional(txtDepartureTime.textProperty());
+        departureProxy.destinationProperty().bindBidirectional(txtDestination.textProperty());
+        departureProxy.viaProperty().bindBidirectional(txtStops.textProperty());
+        departureProxy.platformProperty().bindBidirectional(txtPlatform.textProperty());
 
-        /*txtDepartureTime.;
-        txtDestination;
-        txtPlatform;
-        txtStops;
-        txtTrainNumber;*/
-//        tvDepartureTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-//            oldSelection.departureTimeProperty().unbindBidirectional(txtDepartureTime.textProperty());
-//            selectedDeparture = newSelection;
-//            if (oldSelection != null) {
-//                oldSelection.departureTimeProperty().unbind();
-//                txtDepartureTime.textProperty().unbind();
-//            }
-//            selectedDeparture.departureTimeProperty().bind(txtDepartureTime.textProperty());
-//        });
+        //OnDemand Binding
+        tvDepartureTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (oldValue != null) {
+                departureProxy.trainNumberProperty().unbindBidirectional(oldValue.trainNumberProperty());
+                departureProxy.departureTimeProperty().unbindBidirectional(oldValue.departureTimeProperty());
+                departureProxy.destinationProperty().unbindBidirectional(oldValue.destinationProperty());
+                departureProxy.viaProperty().unbindBidirectional(oldValue.viaProperty());
+                departureProxy.platformProperty().unbindBidirectional(oldValue.platformProperty());
+            }
+            departureProxy.trainNumberProperty().bindBidirectional(newValue.trainNumberProperty());
+            departureProxy.departureTimeProperty().bindBidirectional(newValue.departureTimeProperty());
+            departureProxy.destinationProperty().bindBidirectional(newValue.destinationProperty());
+            departureProxy.viaProperty().bindBidirectional(newValue.viaProperty());
+            departureProxy.platformProperty().bindBidirectional(newValue.platformProperty());
+        });
     }
 
     public void setTimetable(Timetable timetable) {
