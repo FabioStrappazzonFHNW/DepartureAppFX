@@ -10,6 +10,7 @@ import com.google.gson.reflect.TypeToken;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.SelectionModel;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -73,7 +74,6 @@ public class Timetable {
 		}.getType();
 
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF8"))) {
-
 			List<Departure> eles = gson.fromJson(reader, collectionType);
 			departures.addAll(eles);
 		} catch (IOException e) {

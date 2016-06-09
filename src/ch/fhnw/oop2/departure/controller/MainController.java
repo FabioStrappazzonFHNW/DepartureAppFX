@@ -181,6 +181,7 @@ public class MainController implements Initializable {
 
 			}
 		});
+		
 		Platform.runLater(() -> {
 			if (timetable != null && timetable.getFile() == null && timetable.getDeparturesData().isEmpty()) {
 				if (JavaFxUtils.createYesNoAlert("Load Data", "Do you want to load some Data?", "", "Yes", "No")) {
