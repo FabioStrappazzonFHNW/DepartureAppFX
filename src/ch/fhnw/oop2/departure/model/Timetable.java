@@ -21,6 +21,7 @@ import java.util.List;
 
 public class Timetable {
 	private ObservableList<Departure> departures = FXCollections.observableArrayList();
+	private DepartureProxy currentDeparture = new DepartureProxy(); 
 
 	private File file = null;
 
@@ -107,6 +108,16 @@ public class Timetable {
 
 		return gsonb.create();
 	}
+
+	public DepartureProxy getCurrentDeparture() {
+		return currentDeparture;
+	}
+
+	public void setCurrentDeparture(Departure newDeparture) {
+		currentDeparture.set(newDeparture);
+		
+	}
+
 
 
 }
