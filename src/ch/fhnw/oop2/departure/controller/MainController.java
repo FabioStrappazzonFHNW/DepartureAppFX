@@ -5,7 +5,6 @@ import ch.fhnw.oop2.departure.model.Departure;
 import ch.fhnw.oop2.departure.model.DepartureProxy;
 import ch.fhnw.oop2.departure.model.Timetable;
 import ch.fhnw.oop2.departure.util.JavaFxUtils;
-import javafx.application.Platform;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,6 +52,7 @@ public class MainController implements Initializable {
 
 	@FXML
 	public void toggleLanguage(ActionEvent e) {
+		tvDepartureTable.getSelectionModel().select(null);
 		if (toggleLanguage.getText().equals("DE")) {
 			main.loadMainView(new Locale("de", "DE"));
 		} else {
@@ -104,11 +104,6 @@ public class MainController implements Initializable {
 
 		toggleLanguage.setTooltip(new Tooltip(bundle.getString("tooltip")));
 
-		txtDepartureTime.setDisable(true);
-		txtTrainNumber.setDisable(true);
-		txtDestination.setDisable(true);
-		txtStops.setDisable(true);
-		txtPlatform.setDisable(true);
 
 		tcId.setCellValueFactory(cellData -> cellData.getValue().idProperty());
 		tcId.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -157,25 +152,11 @@ public class MainController implements Initializable {
 			txtDestination.setDisable(disabled);
 			txtStops.setDisable(disabled);
 			txtPlatform.setDisable(disabled);
-			if(newValue == null){
-				timetable.setFile(null);
-			}
+			
+			
 		});
 		
-		Platform.runLater(() -> {
-			if (timetable != null && timetable.getFile() == null && timetable.getDeparturesData().isEmpty()) {
-				if (JavaFxUtils.createYesNoAlert("Load Data", "Do you want to load some Data?", "", "Yes", "No")) {
-					FileChooser fileChooser = new FileChooser();
-					fileChooser.setTitle("Open Resource File");
-					fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Comma Separated Value", "*.csv"));
-
-					File f = fileChooser.showOpenDialog(main.getPrimaryStage());
-					if (f != null) {
-						timetable.load(f);
-					}
-				}
-			}
-		});
+		
 
 	}
 
