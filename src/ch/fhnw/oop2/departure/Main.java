@@ -2,12 +2,16 @@ package ch.fhnw.oop2.departure;
 
 import ch.fhnw.oop2.departure.controller.MainController;
 import ch.fhnw.oop2.departure.model.Timetable;
+import ch.fhnw.oop2.departure.util.JavaFxUtils;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.util.Locale;
@@ -36,7 +40,20 @@ public class Main extends Application {
 
 
 		timetable = new Timetable();
+		Platform.runLater(() -> {
+			
+			if (JavaFxUtils.createYesNoAlert("Load Data", "Do you want to load some Data?", "", "Yes", "No")) {
+				FileChooser fileChooser = new FileChooser();
+				fileChooser.setTitle("Open Resource File");
+				fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Comma Separated Value", "*.csv"));
 
+				File f = fileChooser.showOpenDialog(getPrimaryStage());
+				if (f != null) {
+					timetable.load(f);
+				}
+			}
+			
+		});
 
 		loadMainView(new Locale("en", "EN"));
 

@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 /**
  * Created by ernst on 26.04.2016.
  */
@@ -52,8 +53,5 @@ public class Utils {
         	csvString.append("\n");
         }
         return csvString.toString();
-    }
-    public static void shutdown(){
-    	System.exit(0);
     }
 }
