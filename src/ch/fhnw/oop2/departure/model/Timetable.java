@@ -1,6 +1,5 @@
 package ch.fhnw.oop2.departure.model;
 
-import ch.fhnw.oop2.departure.util.JavaFxUtils;
 import ch.fhnw.oop2.departure.util.SimpleStringPropertyDeserializer;
 import ch.fhnw.oop2.departure.util.SimpleStringPropertySerializer;
 import ch.fhnw.oop2.departure.util.Utils;
@@ -13,9 +12,6 @@ import javafx.collections.ObservableList;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 public class Timetable {
@@ -82,17 +78,16 @@ public class Timetable {
 
 	}
 
-	public void saveJSON(File file) {
+	public String saveJSON(File file) {
 		try {
 			Gson gson = getGson();
 			try (Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"))) {
 				String result = gson.toJson(departures.toArray());
 				out.write(result);
-				JavaFxUtils.createTextboxAlert("Saved Departures", "Exported departures to json",
-						"Departures saved in File. Expand to view json.", result);
+				return result;
 			}
 		} catch (IOException e) {
-			new UncheckedIOException(e);
+			throw new UncheckedIOException(e);
 		}
 	}
 

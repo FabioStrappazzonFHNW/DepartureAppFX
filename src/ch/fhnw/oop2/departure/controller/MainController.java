@@ -23,6 +23,7 @@ import java.util.ResourceBundle;
  */
 public class MainController implements Initializable {
 	private ResourceBundle bundle;
+	private Main main;
 	private Timetable timetable;
 
 	@FXML
@@ -63,13 +64,13 @@ public class MainController implements Initializable {
 	@FXML
 	public void redo(ActionEvent actionEvent) {
 		//TODO redo
-		JavaFxUtils.createAlert("Info", "Not yet implemented.", "We haven't implemented <redo> yet.");
+		JavaFxUtils.createAlert(bundle.getString("info"), bundle.getString("notImplemented"), bundle.getString("redoNotImplemented"));
 	}
 
 	@FXML
 	public void undo(ActionEvent actionEvent) {
 		//TODO undo
-		JavaFxUtils.createAlert("Info", "Not yet implemented.", "We haven't implemented <undo> yet.");
+		JavaFxUtils.createAlert(bundle.getString("info"), bundle.getString("notImplemented"), bundle.getString("undoNotImplemented"));
 	}
 
 	@FXML
@@ -94,7 +95,10 @@ public class MainController implements Initializable {
 		fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Json", "*.json"));
 		File f = fileChooser.showSaveDialog(main.getPrimaryStage());
 
-		timetable.saveJSON(f);
+		String result = timetable.saveJSON(f);
+
+		JavaFxUtils.createTextboxAlert(bundle.getString("saved"), bundle.getString("exported"),
+				bundle.getString("expand"), result);
 	}
 
 
@@ -104,43 +108,23 @@ public class MainController implements Initializable {
 
 		toggleLanguage.setTooltip(new Tooltip(bundle.getString("tooltip")));
 
-
 		tcId.setCellValueFactory(cellData -> cellData.getValue().idProperty());
 		tcId.setCellFactory(TextFieldTableCell.forTableColumn());
-		tcId.setOnEditCommit((t) ->
-				t.getTableView().getItems().get(
-						t.getTablePosition().getRow()
-				).setId(t.getNewValue())
-		);
+		tcId.setOnEditCommit(e -> timetable.getCurrentDeparture().setId(e.getNewValue()));
 
 		tcDepartureTime.setCellValueFactory(cellData -> cellData.getValue().departureTimeProperty());
 		tcDepartureTime.setCellFactory(TextFieldTableCell.forTableColumn());
-		tcDepartureTime.setOnEditCommit((t) ->
-				t.getTableView().getItems().get(
-						t.getTablePosition().getRow()
-				).setDepartureTime(t.getNewValue())
-		);
+		tcDepartureTime.setOnEditCommit(e -> timetable.getCurrentDeparture().setDepartureTime(e.getNewValue()));
 
 		tcDestination.setCellValueFactory(cellData -> cellData.getValue().destinationProperty());
 		tcDestination.setCellFactory(TextFieldTableCell.forTableColumn());
-		tcDestination.setOnEditCommit((t) ->
-				t.getTableView().getItems().get(
-						t.getTablePosition().getRow()
-				).setDestination(t.getNewValue())
-		);
+		tcDestination.setOnEditCommit(e ->timetable.getCurrentDeparture().setDestination(e.getNewValue()));
 
 		tcPlatform.setCellValueFactory(cellData -> cellData.getValue().platformProperty());
 		tcPlatform.setCellFactory(TextFieldTableCell.forTableColumn());
-		tcPlatform.setOnEditCommit((t) ->
-				t.getTableView().getItems().get(
-						t.getTablePosition().getRow()
-				).setPlatform(t.getNewValue())
-		);
+		tcPlatform.setOnEditCommit(e ->timetable.getCurrentDeparture().setPlatform(e.getNewValue()));
 
 		JavaFxUtils.addFilter_OnlyNumbers(txtPlatform);
-
-		
-
 		
 		tvDepartureTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
 			
@@ -152,12 +136,7 @@ public class MainController implements Initializable {
 			txtDestination.setDisable(disabled);
 			txtStops.setDisable(disabled);
 			txtPlatform.setDisable(disabled);
-			
-			
 		});
-		
-		
-
 	}
 
 	public void setTimetable(Timetable timetable) {
@@ -169,7 +148,6 @@ public class MainController implements Initializable {
 		c.destinationProperty().bindBidirectional(txtDestination.textProperty());
 		c.viaProperty().bindBidirectional(txtStops.textProperty());
 		c.platformProperty().bindBidirectional(txtPlatform.textProperty());
-		
 		
 		FilteredList<Departure> filteredData = new FilteredList<>(timetable.getDeparturesData(), p -> true);
 		txtFilter.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -187,8 +165,6 @@ public class MainController implements Initializable {
 		});
 		tvDepartureTable.setItems(filteredData);
 	}
-
-	private Main main;
 
 	public void setMain(Main main) {
 		this.main = main;
