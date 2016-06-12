@@ -85,10 +85,6 @@ public class Timetable {
 
 	public void saveJSON(File file) {
 		try {
-			if (file.getAbsolutePath().endsWith(".csv")) {
-				file = Files.move(file.toPath(), Paths.get(file.getAbsolutePath().replace(".csv", ".json")),
-						StandardCopyOption.REPLACE_EXISTING).toFile();
-			}
 			Gson gson = getGson();
 			try (Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"))) {
 				String result = gson.toJson(departures.toArray());

@@ -87,7 +87,7 @@ public class MainController implements Initializable {
 	@FXML
 	public void save(ActionEvent actionEvent) {
 		FileChooser fileChooser = new FileChooser();
-		if (timetable.getFile() != null) {
+		if (timetable.getFile() != null && !timetable.getFile().getAbsolutePath().endsWith(".csv")) {
 			fileChooser.setInitialFileName(timetable.getFile().getPath());
 		}
 		fileChooser.setTitle("Save File");
